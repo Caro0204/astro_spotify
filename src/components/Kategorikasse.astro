@@ -1,0 +1,55 @@
+---
+const { title, billede, labelNew} = Astro.props;
+---
+
+<article class="kategorikasse">
+    {labelNew && <p class="newlabel">NEW</p>}
+    <p>{title}</p>
+ <img src={billede} alt=""/>
+</article>
+
+
+
+<style>
+article {   
+border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 197.6px;
+  height:197.6px;
+
+
+}
+p{
+max-width: 100%;
+  overflow-wrap: break-word;
+  padding: 17px;
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  
+}
+img{
+    height: 100px;
+  position: absolute;
+  width: 100px;
+bottom: 0;
+right: 0;
+transform: rotate(25deg) translate(18%,-2%);
+box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.newlabel{
+    font-size: 10px;
+    position: absolute;
+   background-color: rgb(115, 88, 255);
+   padding: 2px;
+   padding-left: 8px;
+   padding-right: 8px;
+   border-radius: 8px;
+top: 0px;
+  right: 0px;
+}
+
+</style>

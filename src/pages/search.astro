@@ -1,0 +1,115 @@
+---
+import "../styles/global.css";
+import "../pages/index.astro";
+import Footer from "../components/Footer.astro";
+import Mainlayout from "../../src/layouts/Mainlayout.astro";
+import Kategorikasse from "../components/Kategorikasse.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+  </head>
+  <body>
+   
+ <Mainlayout hasSearch="true"></Mainlayout>
+
+    <main>
+        <h2>Browse all</h2>
+        <div class="boxgrid">
+            <div class="kasse1">
+        <Kategorikasse title="Podcast" 
+        billede="https://picsum.photos/id/14/350/350.webp"
+        labelNew={true}/>
+        </div>
+        <div class="kasse2">
+        <Kategorikasse title="Specielt til dig" 
+        billede="https://picsum.photos/id/15/350/350.webp"/>
+        </div>
+        <div class="kasse3">
+        <Kategorikasse title="Hitlister" 
+        billede="https://picsum.photos/id/16/350/350.webp"/>
+        </div>
+        <div class="kasse4">
+        <Kategorikasse title="Nye udgivelser"
+        billede="https://picsum.photos/id/17/350/350.webp"/>
+        </div>
+        <div class="kasse5">
+        <Kategorikasse title="Opdag" 
+        billede="https://picsum.photos/id/11/350/350.webp"
+        labelNew={true}/>
+        </div>
+        <div class="kasse6">
+        <Kategorikasse title="Pop" 
+        billede="https://picsum.photos/id/12/350/350.webp"/>
+        </div>
+        <div class="kasse7">
+        <Kategorikasse title="Sommer" 
+        billede="https://picsum.photos/id/13/350/350.webp"/>
+        </div>
+        <div class="kasse8">
+        <Kategorikasse title="Hygge" 
+        billede="https://picsum.photos/id/18/350/350.webp"
+        labelNew={true}/>
+        </div>
+        <div class="kasse9">
+        <Kategorikasse title="Party" 
+        billede="https://picsum.photos/id/19/350/350.webp"/>
+        </div>
+        <div class="kasse10">
+        <Kategorikasse title="Romantisk" 
+        billede="https://picsum.photos/id/20/350/350.webp"/>
+        </div>
+        <div class="kasse11">
+        <Kategorikasse title="Wellness" 
+        billede="https://picsum.photos/id/21/350/350.webp"/>
+        </div>
+        <div class="kasse12">
+        <Kategorikasse title="Jazz" 
+        billede="https://picsum.photos/id/22/350/350.webp"/>
+        </div>
+        <div class="kasse13">
+        <Kategorikasse title="Sleep" 
+        billede="https://picsum.photos/id/23/350/350.webp"/>
+        </div>
+        <div class="kasse14">
+        <Kategorikasse title="Comedy" 
+        billede="https://picsum.photos/id/24/350/350.webp"/>
+        </div>
+        <div class="kasse15">
+        <Kategorikasse title="Latin" 
+        billede="https://picsum.photos/id/16/350/350.webp"
+        labelNew={true}/>
+        </div>
+        </div>
+    </main>
+     <Footer />
+  </body>
+
+<style>
+ main {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: var(--space-xxl);
+
+    background: linear-gradient(#1f1f1f 0, var(--surface-default) 100%) 0 0 /
+        100% 20rem no-repeat,
+      var(--surface-default);
+
+    overflow-y: auto;
+    padding: var(--space-lg) var(--space-md);
+  }
+  /* .kategorikasse {
+    display: grid; 
+    grid-template-rows: repeat(5, 1fr)
+  } */
+
+  @media (width > 1000px) {
+    main {
+      padding: var(--space-lg) var(--space-xl);
+    }
+  }
+</style>
